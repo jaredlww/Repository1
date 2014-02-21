@@ -1,0 +1,85 @@
+﻿html,body,div,p,img,a,ul,li
+{   margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    outline: 0px none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: none repeat scroll 0% 0% transparent;
+}
+
+html,div{ display:block;}
+
+ul,li
+    {
+   list-style: none;
+    }
+
+ul {width:620px; margin:50px 0 0 50px;}
+li {float:left; clear:left; width:320px; height:200px; margin-bottom:20px; border:3px solid #ccc; box-shadow:0 0 1px #000; display:inline-block; overflow:hidden;}
+
+
+ .threeDemo {
+    width: 320px;
+    height: 200px;
+    position: relative;
+    margin: 0px auto;
+}
+
+/*content 样式 ，1、固定中content */
+.content {position:absolute; top:0; left:0; overflow:hidden;}
+.content h3, .content p {width:285px; margin:0 auto; text-align:center; overflow:hidden; color:#fff; text-shadow:1px 0 1px #000;}
+.content h3 {height:30px; line-height:30px; font-size:16px;}
+.content p {height:45px; line-height:22px; font-size:14px; }
+.content a {box-shadow:1px 0 1px #000; text-shadow:1px 0 1px #000;}
+
+
+.transform {
+height: 200px;
+overflow: hidden;
+}
+
+/*threeDemo----------------------------------------------------------*/
+			.threeDemo .transform {-moz-transition:all 1s ease-in 0.1s; -webkit-transition:all 1s ease-in 0.1s;}
+			.threeDemo:hover .transform { -webkit-transform:rotate(720deg) scale(0);}
+			.threeDemo .content {height:200px; padding:0 20px; top:-200px; opactiy:0;background-color:rgba(200, 200, 200, 0.5);
+						 -webkit-transition:all 0.3s ease-out 0.5s;
+			}
+			.threeDemo:hover .content {top:0; opactiy:1;
+						 -webkit-animation:0.9s linear 0s normal none 1 bounceY;
+						 -webkit-transition-delay:0s;
+			}
+			.threeDemo .content h3 {margin:30px auto 0; background:rgba(110, 120, 110, 0.8); box-shadow:1px 0 1px #000;
+						 -webkit-transform:translateY(-200px);
+						 -webkit-transition:all 0.6s ease-in-out 0.1s;
+			}
+			.threeDemo .content:hover h3 {
+						 -webkit-transform:translateY(0);
+						 -webkit-transition-delay:0;
+			}
+			.threeDemo .content p {margin-top:20px;
+						 -webkit-transform:translateY(-200px);
+						 -webkit-transition:all 0.4s ease-in-out 0.1s;
+			}
+			.threeDemo .content:hover p {
+						 -webkit-transform:translateY(0);
+						 -webkit-transition-delay:0;
+			}
+			.threeDemo .content a {display:block; width:80px; margin:20px 0 0 0; height:30px; font-size:14px; color:#fff; background:rgba(110, 120, 110, 0.8); text-decoration:none; line-height:30px; text-align:center;
+						 -webkit-transform:translateY(-200px);
+						 -webkit-transition:all 0.2s ease-in-out 0.1s;
+			}
+			.threeDemo .content:hover a {
+						 -webkit-transform:translateY(0);
+						 -webkit-transition-delay:0;
+			}
+	
+			}
+			@-webkit-keyframes bounceY {
+			    0% { -webkit-transform: translateY(-200px);}
+			    40% { -webkit-transform: translateY(-180px);}
+			    65% { -webkit-transform: translateY(-102px);}
+			    82% { -webkit-transform: translateY(-75px);}
+			    92% { -webkit-transform: translateY(-32px);}
+			    55%, 75%, 87%, 97%, 100% { -webkit-transform: translateY(0px);}
+			}
